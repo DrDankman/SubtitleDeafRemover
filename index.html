@@ -7,13 +7,26 @@
 	<title>Subtitle Deaf stuff Remover</title>
 </head>
 <body>
-	<div id="controls">
-		<button onclick="translateSubs()">Submit</button>
+	<div>
+		<h1>Subtitle SDH Remover</h1>
+	</div>
+	<div>
+		<p>Instructions</p>
+	</div>
+	<div>
+		<input id="deafremoval" type="checkbox" checked> SDH Removal<br>
+		<input id="musicremoval" type="checkbox"> Music Text Removal<br><br>
+		<p id="progress"></p>
 	</div>
 
 	<textarea rows="15" cols="50" type="text" id="textInput" placeholder="Paste subtitles here"></textarea>
 
-	<textarea rows="15" cols="50" id="demo" disabled placeholder="Fixed text will appear here"></textarea>
+	<textarea rows="15" cols="50" id="textOutput" placeholder="Fixed text will appear here" disabled></textarea>
+
+	<div id="controls">
+		<button onclick="translateSubs()" id="button">Submit</button>
+		<button onclick="copyText()" id="copyButton">Copy Text</button>
+	</div>
 
 	<script src="script.js"></script>
 </body>
